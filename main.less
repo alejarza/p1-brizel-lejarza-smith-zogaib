@@ -1,6 +1,62 @@
 @import "./variables.less";
 @import "./mixins.less";
 
+body {
+    font-family: raleway, sans-serif;
+}
+
+/*********HOME PAGE*************/
+.index-top {
+    background: @white;
+    color: @mauve;
+    padding: 10% 8%;
+}
+
+.index-top img {
+    width: 100%;
+    max-width: 323px;
+}
+
+.index-bottom {
+    background: @light-pink;
+    padding: 8%;
+}
+
+.index-reviews {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.index-reviews figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.index-reviews img {
+    width: 50%;
+}
+
+.index-span1, .index-span2, .index-span3 {
+    font-family: professor, sans-serif;
+}
+
+.index-span2 {
+    font-size: 26px;
+}
+
+.index-span3 {
+    font-size: @font-h2;
+}
+
+.review-text {
+    font-family: professor, sans-serif;
+    font-size: 20px;
+}
+
+
+
 .locations h1,
 .contact-us h1,
 .text-center {
