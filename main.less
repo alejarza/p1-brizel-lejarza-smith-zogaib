@@ -1,4 +1,5 @@
 @import "./variables.less";
+@import "./mixins.less";
 
 body {
     font-family: raleway, sans-serif;
@@ -52,4 +53,82 @@ body {
 .review-text {
     font-family: professor, sans-serif;
     font-size: 20px;
+}
+
+
+
+.locations h1,
+.contact-us h1,
+.text-center {
+    font-family: professor, sans-serif;
+    color: @mauve;
+    font-size: @font-h1;
+    text-align: center;
+    background-color: white
+}
+
+/*********CONTACT PAGE*************/
+.contact-us {
+    background-color:white;
+    text-align: center;
+    font-family: raleway, sans-serif;
+    text-align: center;
+    background-image: url("images/pastel-sky.jpg");
+    background-size: cover;
+  }
+
+  .contact-pop {
+      display:inline-block;
+      background-color: @light-green;
+      width: 300px;
+      border: 10px solid @light-pink;
+      padding: 25px;
+      margin: 20px;
+      border-radius: 12px;
+  }
+
+  button {
+    border-radius: 12px;
+    background-color: @peach;
+  }
+
+/************CONTACT PAGE**********/
+
+h2 {
+    font-family: raleway, sans-serif;
+}
+
+p {
+    font-family: roboto, sans-serif;
+}
+
+.card {
+    margin: 5%;
+    border: none;
+}
+
+.card-title {
+    font-family: professor, sans-serif;
+    font-size: @font-h2;
+}
+
+
+.backgroundcolor1 {
+    background-color: @peach;
+    height: 500px;
+    position: relative;
+    margin-top: 300px;
+}
+
+.card-group {
+    position: absolute;
+    z-index: 999;
+}
+
+
+.backgroundcolor2 {
+    background-color: @light-green;
+    height: 500px;
+    position: relative;
+    margin-top: 300px;
 }
