@@ -118,8 +118,11 @@ body {
 /*********HOME PAGE*************/
 .index-top {
     background: @white;
-    color: @mauve;
+    color: @charcoal;
     padding: 10% 8%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
 
 .index-top img {
@@ -127,29 +130,60 @@ body {
     max-width: 323px;
 }
 
+.index-top h1 {
+    padding: 15% 0;
+}
+
+img.index-button {
+    width: 50%;
+    max-width: 99px;
+
+}
+
+.index-top a {
+    text-align: center;
+}
+
+.desktopindex-top {
+    display: none;
+}
+
 .index-bottom {
     background: @light-pink;
+    color: @charcoal;
     padding: 8%;
+    display: flex;
+    flex-flow: column;
 }
+
+.index-bottom h2 {
+    text-align: center;
+    padding: 10% 0% 4%;
+    font-size: 24px;
+}
+
 
 .index-reviews {
-    display: flex;
-    flex-direction: column;
+    text-align: center;
 }
 
 
-.index-reviews figure{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .index-reviews img {
     width: 50%;
 }
 
+.index-reviews figcaption {
+    padding-top: 4%;
+}
+
 .index-span1, .index-span2, .index-span3 {
     font-family: professor, sans-serif;
+}
+
+.index-span1 {
+    color: @mauve;
+    font-size:40px; ;
 }
 
 .index-span2 {
@@ -314,6 +348,80 @@ p {
     height: 500px;
     position: relative;
     margin-top: 300px;
+}
+
+/*********MEDIA QUERIES*************/
+
+/*********HOME PAGE MIN-WIDTH 500PX MEDIA QUERY*************/
+@media(min-width:500px) {
+
+    .index-body {
+        margin: 0 auto;
+    }
+
+    .index-top {
+        display: none;
+    }
+
+    .desktopindex-top {
+        display: flex;
+        margin: auto;
+    }
+
+    .desktopindex-top img {
+        width: 50%;
+    }
+
+    .index1-desktop{
+        background: @light-green;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: left;
+        padding-top: 12%;
+        margin: 0 auto;
+        h1{
+        text-align: left;
+        margin: auto;
+        }
+        p{
+        font-size: 1.3rem;
+        margin: auto;
+        }
+        a{
+        text-align: center;
+        padding-bottom: 15%;
+        margin: auto;
+        
+        }
+    }
+
+    .index-span1{
+        font-size: 36px;
+
+
+    }
+
+
+    .index-bottom {
+        padding: 0%;
+    }
+}
+
+/*********HOME PAGE MIN-WIDTH 830PX MEDIA QUERY*************/
+@media(min-width:830px) {
+
+    .index-body{
+        margin: 0 auto;
+    }
+
+    .index1-desktop p{
+        padding-top: 16%;
+    }
+
+    .index-span1{
+        font-size: 44px;
+    }
 }
 /************MENU PAGE END**********/
 
