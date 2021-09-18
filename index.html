@@ -19,16 +19,52 @@
 
 </head>
 
-<body>
+<body class="index-body">
     <header>
+<!-- mobile nav -->
+        <nav role="navigation">
+            <div id="menuToggle">
 
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            </div>
+        </nav>
+<!-- desktop nav -->
+        <nav class="desktop-nav">
+            <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="index.html"><img class="logo" src="images/pop-secondarylogo.png" alt="Pop! logo"></a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="index-top">
         <img src="images/pop-revised-logo.png" alt="mobile Index Logo" title="Logo for Mobile Index">
         <h1>Welcome to <span class="index-span1">Pop!</span></h1> 
-        <p>Find a location near you!</p>
-        <a href="#"><img src=""alt="index-button" title="index-button"></a>
+            <p>Find a location near you!</p>
+            <a href="#"><img class="index-button" src="images/arrow-icon.png"alt="index-button" title="index-button"></a>
+    </section>
+    
+    <section class="desktopindex-top">
+         <img src="images/index-drink.jpg" alt="Desktop Index Drink" title="Hand Holding Boba">
+         <div class="index1-desktop">
+            <h1>Welcome to <span class="index-span1">Pop!</span></h1>
+            <p>Find a location near you!</p>
+            <a href="#"><img class="index-button" src="images/arrow-icon.png" alt="index-button" title="index-button"></a>
+         </div>
     </section>
 
     <section class="index-bottom">

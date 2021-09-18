@@ -1,15 +1,128 @@
 @import "./variables.less";
 @import "./mixins.less";
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 body {
     font-family: raleway, sans-serif;
 }
 
+.desktop-nav {
+	display: none;
+}
+
+#menuToggle {
+    display: block;
+}
+
+/********* HEADER START **********/
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: @copy;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: @mauve;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: @peach;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: @copy;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 200px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #f8deca;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+/********* HEADER END *********/
+
 /*********HOME PAGE*************/
 .index-top {
     background: @white;
-    color: @mauve;
+    color: @charcoal;
     padding: 10% 8%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
 
 .index-top img {
@@ -17,29 +130,60 @@ body {
     max-width: 323px;
 }
 
+.index-top h1 {
+    padding: 15% 0;
+}
+
+img.index-button {
+    width: 50%;
+    max-width: 99px;
+
+}
+
+.index-top a {
+    text-align: center;
+}
+
+.desktopindex-top {
+    display: none;
+}
+
 .index-bottom {
     background: @light-pink;
+    color: @charcoal;
     padding: 8%;
+    display: flex;
+    flex-flow: column;
 }
+
+.index-bottom h2 {
+    text-align: center;
+    padding: 10% 0% 4%;
+    font-size: 24px;
+}
+
 
 .index-reviews {
-    display: flex;
-    flex-direction: column;
+    text-align: center;
 }
 
 
-.index-reviews figure{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .index-reviews img {
     width: 50%;
 }
 
+.index-reviews figcaption {
+    padding-top: 4%;
+}
+
 .index-span1, .index-span2, .index-span3 {
     font-family: professor, sans-serif;
+}
+
+.index-span1 {
+    color: @mauve;
+    font-size:40px; ;
 }
 
 .index-span2 {
@@ -65,10 +209,49 @@ body {
     text-align: center;
     background-color: white
 }
+
 /*********LOCATIONS PAGE***********/
 .locations h2,
 .locations h3,
 .hours {
+
+/********* HOME PAGE END *********/
+
+/********* FOOTER START *********/
+footer {
+    text-align: center;
+    background-color: #faede9
+}
+
+footer li {
+    list-style-type: none;
+    display: inline;
+}
+
+footer a {
+    color: @mauve;
+    padding: 10px;
+}
+
+footer a:hover {
+    color: #75544f;
+    transition: .3s ease;
+}
+
+.icon {
+    padding: 40px 0;
+    margin: 10px;
+}
+
+
+/********* FOOTER END *********/
+
+
+
+
+
+/********LOCATIONS PAGE START*******/
+.locations h2 {
     text-align: center;
 }
 
@@ -110,8 +293,9 @@ body {
     background-color: @light-blue;
 }
 
-/*********LOCATIONS PAGE***********/
-/*********CONTACT PAGE*************/
+/*********LOCATIONS PAGE END***********/
+
+/*********CONTACT PAGE START*************/
 .contact-us {
     background-color:white;
     text-align: center;
@@ -135,9 +319,9 @@ body {
     border-radius: 12px;
     background-color: @peach;
   }
+/************CONTACT PAGE END**********/
 
-/************CONTACT PAGE**********/
-
+/************MENU PAGE START**********/
 h2 {
     font-family: raleway, sans-serif;
 }
@@ -183,7 +367,6 @@ p {
         margin: 10%;
         padding: 1%;
     }
-
 }
 /*********LOCATIONS PAGE MIN-WIDTH 320PX MEDIA QUERY*************/
 /*********LOCATIONS PAGE MIN-WIDTH 500PX MEDIA QUERY*************/
@@ -193,3 +376,124 @@ p {
     }
 }
 /*********LOCATIONS PAGE MIN-WIDTH 500PX MEDIA QUERY*************/
+/*********MEDIA QUERIES*************/
+
+/*********HOME PAGE MIN-WIDTH 500PX MEDIA QUERY*************/
+@media(min-width:500px) {
+
+    .index-body {
+        margin: 0 auto;
+    }
+
+    .index-top {
+        display: none;
+    }
+
+    .desktopindex-top {
+        display: flex;
+        margin: auto;
+    }
+
+    .desktopindex-top img {
+        width: 50%;
+    }
+
+    .index1-desktop{
+        background: @light-green;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: left;
+        padding-top: 12%;
+        margin: 0 auto;
+        h1{
+        text-align: left;
+        margin: auto;
+        }
+        p{
+        font-size: 1.3rem;
+        margin: auto;
+        }
+        a{
+        text-align: center;
+        padding-bottom: 15%;
+        margin: auto;
+        
+        }
+    }
+
+    .index-span1{
+        font-size: 36px;
+
+
+    }
+
+
+    .index-bottom {
+        padding: 0%;
+    }
+}
+
+/*********HOME PAGE MIN-WIDTH 830PX MEDIA QUERY*************/
+@media(min-width:830px) {
+
+    .index-body{
+        margin: 0 auto;
+    }
+
+    .index1-desktop p{
+        padding-top: 16%;
+    }
+
+    .index-span1{
+        font-size: 44px;
+    }
+}
+/************MENU PAGE END**********/
+
+
+
+
+/************ MEDIA QUERY **********/
+
+@media (min-width: 800px) {
+
+    #menuToggle {
+		display: none;
+	}
+
+    .desktop-nav {
+		display: block;
+        text-align:center;
+        font-family: raleway, sans-serif;
+        padding: 30px 0;
+
+        img {
+            width: 12%;
+            padding: 0 0 0 10px;
+        }
+
+        li {
+            list-style-type: none;
+            display: inline;
+            padding: 0 25px;
+        }
+
+        a {
+            color: @copy;
+            text-decoration: none;
+        }
+
+        :hover {
+            color: @mauve;
+            transition: .3s, ease;
+        }
+        .logo:hover {
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+            transition: 1s ease;
+        }
+	}
+
+}
