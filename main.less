@@ -379,6 +379,7 @@ p {
 .about {
     font-size: @font-h1;
     color: @light-blue;
+    font-weight: bold;
 }
 
 .about-p {
@@ -394,6 +395,7 @@ p {
 .poptext {
     font-family: professor;
     color: @mauve;
+    font-weight:normal;
 }
 
 .bobabackground {
@@ -649,15 +651,7 @@ p {
     }
 }
 /*********LOCATIONS PAGE MIN-WIDTH 320PX MEDIA QUERY*************/
-/*********MENU PAGE MAX-WIDTH 400PX MEDIA QUERY*************/
 
-@media (max-width: 400px) {
-    .card-group {
-        display:flex;
-        flex-direction: column;
-    }
-}
-/*********MENU PAGE MAX-WIDTH 400PX MEDIA QUERY*************/
 /*********LOCATIONS PAGE MIN-WIDTH 500PX MEDIA QUERY*************/
 @media (min-width: 500px) {
     .hours {
@@ -729,7 +723,15 @@ p {
     }
 }
 /*********ABOUT PAGE END MIN-WIDTH 576PX MEDIA QUERY*************/
+/*********MENU PAGE MAX-WIDTH 600PX MEDIA QUERY*************/
 
+@media (max-width: 600px) {
+    .card-group {
+        display:flex;
+        flex-direction: column;
+    }
+}
+/*********MENU PAGE MAX-WIDTH 600PX MEDIA QUERY*************/
 
 /*********HOME PAGE MIN-WIDTH 830PX MEDIA QUERY*************/
 @media(min-width:830px) {
@@ -746,8 +748,8 @@ p {
         font-size: 44px;
     }
 }
-/************MENU PAGE END**********/
 
+/************MENU PAGE END**********/
 
 
 
