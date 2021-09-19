@@ -398,6 +398,7 @@ p {
 
 .card-group {
     padding: 2%;
+    
 }
 
 .menubackground {
@@ -688,6 +689,17 @@ p {
 /************ABOUT PAGE END**********/
 
 /*********MEDIA QUERIES*************/
+
+/*********MENU PAGE MAX-WIDTH 600PX MEDIA QUERY*************/
+@media (max-width: 600px) {
+    .card-group {
+        display:flex;
+        flex-direction: column;
+    }
+}
+/*********MENU PAGE MAX-WIDTH 600PX MEDIA QUERY*************/
+
+
 /*********LOCATIONS PAGE MIN-WIDTH 320PX MEDIA QUERY*************/
 @media (min-width: 320px) {
     .hours {
@@ -696,6 +708,7 @@ p {
     }
 }
 /*********LOCATIONS PAGE MIN-WIDTH 320PX MEDIA QUERY*************/
+
 /*********LOCATIONS PAGE MIN-WIDTH 500PX MEDIA QUERY*************/
 @media (min-width: 500px) {
     .hours {
@@ -752,6 +765,7 @@ p {
 
     .index-reviews {
         flex-direction: row;
+        padding: 0 2% 2%;
     }
 
     .index-span1{
@@ -790,27 +804,7 @@ p {
 }
     /********* FOOTER END MIN-WIDTH 590PX MEDIA QUERY*************/
 
-/*********HOME PAGE MIN-WIDTH 830PX MEDIA QUERY*************/
-@media(min-width:830px) {
-
-    .index-body{
-        margin: 0 auto;
-    }
-
-    .index1-desktop p{
-        padding-top: 16%;
-    }
-
-    .index-span1{
-        font-size: 44px;
-    }
-}
-
-/************MENU PAGE END**********/
-
-
-
-/************ MEDIA QUERY **********/
+    /********* MIN-WIDTH 800PX MEDIA QUERY*************/
 
 @media (min-width: 800px) {
 
@@ -854,6 +848,27 @@ p {
 
 }
 
+/*********HOME PAGE MIN-WIDTH 830PX MEDIA QUERY*************/
+@media(min-width:830px) {
+
+    .index-body{
+        margin: 0 auto;
+    }
+
+    .index1-desktop p{
+        padding-top: 16%;
+    }
+
+    .index-span1{
+        font-size: 44px;
+    }
+}
+
+/************MENU PAGE END**********/
+
+
+
+
 /*********ABOUT PAGE MIN-WIDTH 1025PX MEDIA QUERY*************/
 
 @media (min-width: 1025px) {
@@ -862,6 +877,6 @@ p {
         width: 50%;
         }
     }
-
 /*********ABOUT PAGE END MIN-WIDTH 1025PX MEDIA QUERY*************/
+
 
