@@ -1,17 +1,118 @@
 @import "./variables.less";
 @import "./mixins.less";
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 body {
     font-family: raleway, sans-serif;
 }
-/*********MOBILE STYLING*************/
+
+.desktop-nav {
+	display: none;
+}
+
+#menuToggle {
+    display: block;
+}
 
 /********* HEADER START **********/
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  webkit-user-select: none;
+  user-select: none;
+}
 
+#menuToggle a {
+  text-decoration: none;
+  color: @copy;
+  transition: color 0.3s ease;
+}
 
+#menuToggle a:hover {
+  color: @mauve;
+}
 
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
 
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: @peach;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
 
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: @copy;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 200px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #f8deca;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
 /********* HEADER END *********/
 
 /*********HOME PAGE*************/
@@ -61,12 +162,9 @@ img.index-button {
     font-size: 24px;
 }
 
-
 .index-reviews {
     text-align: center;
 }
-
-
 
 .index-reviews img {
     width: 50%;
@@ -98,7 +196,6 @@ img.index-button {
     font-size: 20px;
 }
 
-
 .locations h1,
 .contact-us h1,
 .text-center {
@@ -108,6 +205,7 @@ img.index-button {
     text-align: center;
     background-color: white
 }
+
 /********* HOME PAGE END *********/
 
 /********* FOOTER START *********/
@@ -136,17 +234,24 @@ footer a:hover {
     margin: 10px;
 }
 
-
 /********* FOOTER END *********/
 
-
-
-
-
 /********LOCATIONS PAGE START*******/
+.locations h2,
+.locations h3,
+.hours {
+    text-align: center;
+    font-family: raleway, sans-serif;
+}
+
 .locations h2 {
     text-align: center;
-    padding: 1%;
+}
+
+.hours {
+    margin: 2% 35%;
+    padding: 2%;
+    background-color: @mauve;
 }
 
 .slideshow,
@@ -189,8 +294,6 @@ footer a:hover {
     text-align: center;
     font-family: raleway, sans-serif;
     text-align: center;
-    background-image: url("images/pastel-sky.jpg");
-    background-size: cover;
   }
 
   .contact-pop {
@@ -228,7 +331,6 @@ p {
     font-size: @font-h2;
 }
 
-
 .backgroundcolor1 {
     background-color: @peach;
     height: 500px;
@@ -241,7 +343,6 @@ p {
     z-index: 999;
 }
 
-
 .backgroundcolor2 {
     background-color: @light-green;
     height: 500px;
@@ -250,6 +351,21 @@ p {
 }
 
 /*********MEDIA QUERIES*************/
+/*********LOCATIONS PAGE MIN-WIDTH 320PX MEDIA QUERY*************/
+@media (min-width: 320px) {
+    .hours {
+        margin: 10%;
+        padding: 1%;
+    }
+}
+/*********LOCATIONS PAGE MIN-WIDTH 320PX MEDIA QUERY*************/
+/*********LOCATIONS PAGE MIN-WIDTH 500PX MEDIA QUERY*************/
+@media (min-width: 500px) {
+    .hours {
+        margin: 3% 30%;
+    }
+}
+/*********LOCATIONS PAGE MIN-WIDTH 500PX MEDIA QUERY*************/
 
 /*********HOME PAGE MIN-WIDTH 500PX MEDIA QUERY*************/
 @media(min-width:500px) {
@@ -323,4 +439,50 @@ p {
     }
 }
 
+/************MENU PAGE END**********/
 
+
+
+/************ MEDIA QUERY **********/
+
+@media (min-width: 800px) {
+
+    #menuToggle {
+		display: none;
+	}
+
+    .desktop-nav {
+		display: block;
+        text-align:center;
+        font-family: raleway, sans-serif;
+        padding: 30px 0;
+
+        img {
+            width: 12%;
+            padding: 0 0 0 10px;
+        }
+
+        li {
+            list-style-type: none;
+            display: inline;
+            padding: 0 25px;
+        }
+
+        a {
+            color: @copy;
+            text-decoration: none;
+        }
+
+        :hover {
+            color: @mauve;
+            transition: .3s, ease;
+        }
+        .logo:hover {
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+            transition: 1s ease;
+        }
+	}
+
+}
