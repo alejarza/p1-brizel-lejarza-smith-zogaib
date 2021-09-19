@@ -263,7 +263,8 @@ footer a:hover {
 
 .stores {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .LA, 
@@ -652,13 +653,7 @@ p {
 }
 /*********LOCATIONS PAGE MIN-WIDTH 320PX MEDIA QUERY*************/
 
-/*********LOCATIONS PAGE MIN-WIDTH 500PX MEDIA QUERY*************/
-@media (min-width: 500px) {
-    .hours {
-        margin: 3% 30%;
-    }
-}
-/*********LOCATIONS PAGE MIN-WIDTH 500PX MEDIA QUERY*************/
+
 
 /*********HOME PAGE MIN-WIDTH 500PX MEDIA QUERY*************/
 @media(min-width:500px) {
@@ -732,6 +727,20 @@ p {
     }
 }
 /*********MENU PAGE MAX-WIDTH 600PX MEDIA QUERY*************/
+
+/*********LOCATIONS PAGE MAX-WIDTH 600PX MEDIA QUERY*************/
+@media (max-width: 600px) {
+    .hours {
+        margin: 3% 30%;
+    }
+    .stores {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+/*********LOCATIONS PAGE MAX-WIDTH 600PX MEDIA QUERY*************/
 
 /*********HOME PAGE MIN-WIDTH 830PX MEDIA QUERY*************/
 @media(min-width:830px) {
@@ -807,4 +816,3 @@ p {
     }
 
 /*********ABOUT PAGE END MIN-WIDTH 1025PX MEDIA QUERY*************/
-
