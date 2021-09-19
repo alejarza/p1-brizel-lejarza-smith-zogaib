@@ -219,17 +219,8 @@ img.index-button {
 /********* FOOTER START *********/
 footer {
     text-align: center;
-    background-color: #faede9
-}
-
-footer li {
-    list-style-type: none;
-    display: inline;
-}
-
-footer a {
-    color: @mauve;
-    padding: 10px;
+    background-color: #faede9;
+    padding-bottom: 20px;
 }
 
 footer a:hover {
@@ -237,9 +228,42 @@ footer a:hover {
     transition: .3s ease;
 }
 
+.icons {
+    padding: 30px 0 0 0;
+}
+
 .icon {
-    padding: 40px 0;
     margin: 10px;
+}
+
+footer li {
+    list-style-type: none;
+    display: block;
+    padding: 5px 0;
+}
+
+footer a {
+    color: @mauve;
+    padding: 10px;
+}
+
+footer ul {
+    padding: 20px 70px 0;
+}
+
+footer p {
+    color: #815e59;
+    padding: 10px 50px 0;
+}
+
+.footer-fontsize {
+    font-size: .8em;
+    margin: 0px 0;
+}
+
+footer a:hover {
+    color: #75544f;
+    transition: .3s ease;
 }
 
 /********* FOOTER END *********/
@@ -665,6 +689,17 @@ p {
 /************ABOUT PAGE END**********/
 
 /*********MEDIA QUERIES*************/
+
+/*********MENU PAGE MAX-WIDTH 600PX MEDIA QUERY*************/
+@media (max-width: 600px) {
+    .card-group {
+        display:flex;
+        flex-direction: column;
+    }
+}
+/*********MENU PAGE MAX-WIDTH 600PX MEDIA QUERY*************/
+
+
 /*********LOCATIONS PAGE MIN-WIDTH 320PX MEDIA QUERY*************/
 @media (min-width: 320px) {
     .hours {
@@ -751,39 +786,27 @@ p {
     }
 }
 /*********ABOUT PAGE END MIN-WIDTH 576PX MEDIA QUERY*************/
-/*********MENU PAGE MAX-WIDTH 600PX MEDIA QUERY*************/
 
-@media (max-width: 600px) {
-    .card-group {
-        display:flex;
-        flex-direction: column;
+/********* FOOTER START MIN-WIDTH 590PX MEDIA QUERY*************/
+@media (min-width: 590px) {
+    footer {
+    
+        li {
+            display: inline;
+        }
+        ul {
+            padding: 20px 100px 0;
+        }
+        p {
+            padding: 10px 100px 0;
+        }
     }
 }
-/*********MENU PAGE MAX-WIDTH 600PX MEDIA QUERY*************/
+    /********* FOOTER END MIN-WIDTH 590PX MEDIA QUERY*************/
 
-/*********HOME PAGE MIN-WIDTH 830PX MEDIA QUERY*************/
-@media(min-width:830px) {
+    /********* MIN-WIDTH 600PX MEDIA QUERY*************/
 
-    .index-body{
-        margin: 0 auto;
-    }
-
-    .index1-desktop p{
-        padding-top: 16%;
-    }
-
-    .index-span1{
-        font-size: 44px;
-    }
-}
-
-/************MENU PAGE END**********/
-
-
-
-/************ MEDIA QUERY **********/
-
-@media (min-width: 800px) {
+@media (min-width: 600px) {
 
     #menuToggle {
 		display: none;
@@ -825,6 +848,27 @@ p {
 
 }
 
+/*********HOME PAGE MIN-WIDTH 830PX MEDIA QUERY*************/
+@media(min-width:830px) {
+
+    .index-body{
+        margin: 0 auto;
+    }
+
+    .index1-desktop p{
+        padding-top: 16%;
+    }
+
+    .index-span1{
+        font-size: 44px;
+    }
+}
+
+/************MENU PAGE END**********/
+
+
+
+
 /*********ABOUT PAGE MIN-WIDTH 1025PX MEDIA QUERY*************/
 
 @media (min-width: 1025px) {
@@ -833,6 +877,6 @@ p {
         width: 50%;
         }
     }
-
 /*********ABOUT PAGE END MIN-WIDTH 1025PX MEDIA QUERY*************/
+
 
