@@ -15,36 +15,41 @@
 <body class="locations">
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="menu.html">Menu</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html"> <img src="images/pop-secondarylogo.png" alt="Pop! logo"></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="locations.html">Locations</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
+
+<!-- mobile nav -->
+    <nav role="navigation">
+      <div id="menuToggle">
+
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
+    </nav>
+
+<!-- desktop nav -->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="index.html"><img class="logo" src="images/pop-secondarylogo.png" alt="Pop! logo"></a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
     <h1>Locations</h1>
     <h2>Find a Pop! near you</h2>
+    <h3>Click the buttons below to see our three locations.</h3>
 
     <section class="slideshow">
     <img class="mySlides" src="images/LA.jpg" alt="LA Location" title="LA Pop!">
@@ -55,6 +60,17 @@
     <section class="slide-button">
     <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
     <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+    </section>
+
+    <section class="hours">
+      <h2>Hours</h2>
+      <p>Monday: Closed</p>
+      <p>Tuesday: 11 AM - 7 PM</p>
+      <p>Wednesday: 11 AM - 7 PM</p>
+      <p>Thursday: 11 AM - 7 PM</p>
+      <p>Friday: 11 AM - 9 PM</p>
+      <p>Saturday: 11 AM - 9 PM</p>
+      <p>Sunday: 11 AM - 5 PM</p>
     </section>
 
     <aside class="stores">
@@ -86,12 +102,11 @@
       <ul>
         <li><a href="about.html">About</a></li>
         <li><a href="menu.html">Menu</a></li>
-        <li><a href="index.html"> <img class="footer-logo" src="images/pop-secondarylogo.png" height="150" alt="Pop! logo"></a></li>
+        <li><a href="index.html"> <img class="footer-logo" src="images/logo-simple.png" height="150" alt="Pop! logo"></a></li>
         <li><a href="locations.html">Locations</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
     <script src="slideshow.js"></script>
 </body>
