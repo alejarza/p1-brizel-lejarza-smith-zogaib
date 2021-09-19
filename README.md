@@ -24,3 +24,4 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
 
 The group used this site to refer to bootstrap. 
 
+The group had issues with manipulating the bootstrap to make the site responsive. We also had some trouble using github branches to work collaboratively. We were not sure about how to merge branches at first. 
