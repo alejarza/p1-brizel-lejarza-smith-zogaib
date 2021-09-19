@@ -23,8 +23,8 @@ body {
 #menuToggle {
   display: block;
   position: relative;
-  top: 50px;
-  left: 50px;
+  top: 15px;
+  left: 15px;
   z-index: 1;
   webkit-user-select: none;
   user-select: none;
@@ -48,8 +48,8 @@ body {
   top: -7px;
   left: -5px;
   cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0;
+  z-index: 2;
   -webkit-touch-callout: none;
 }
 
@@ -94,7 +94,7 @@ body {
 #menu {
   position: absolute;
   width: 200px;
-  margin: -100px 0 0 -50px;
+  margin: -100px 0 0 -15px;
   padding: 50px;
   padding-top: 125px;
   background: #f8deca;
@@ -137,7 +137,13 @@ body {
 img.index-button {
     width: 50%;
     max-width: 99px;
+}
 
+.index-button:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
 }
 
 .index-top a {
@@ -164,6 +170,8 @@ img.index-button {
 
 .index-reviews {
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .index-reviews img {
@@ -211,17 +219,8 @@ img.index-button {
 /********* FOOTER START *********/
 footer {
     text-align: center;
-    background-color: #faede9
-}
-
-footer li {
-    list-style-type: none;
-    display: inline;
-}
-
-footer a {
-    color: @mauve;
-    padding: 10px;
+    background-color: #faede9;
+    padding-bottom: 20px;
 }
 
 footer a:hover {
@@ -229,26 +228,59 @@ footer a:hover {
     transition: .3s ease;
 }
 
+.icons {
+    padding: 30px 0 0 0;
+}
+
 .icon {
-    padding: 40px 0;
     margin: 10px;
+}
+
+footer li {
+    list-style-type: none;
+    display: block;
+    padding: 5px 0;
+}
+
+footer a {
+    color: @mauve;
+    padding: 10px;
+}
+
+footer ul {
+    padding: 20px 70px 0;
+}
+
+footer p {
+    color: #815e59;
+    padding: 10px 50px 0;
+}
+
+.footer-fontsize {
+    font-size: .8em;
+    margin: 0px 0;
+}
+
+footer a:hover {
+    color: #75544f;
+    transition: .3s ease;
 }
 
 /********* FOOTER END *********/
 
 /********LOCATIONS PAGE START*******/
-.locations h2,
-.locations h3,
+
+.locations {
+    h2,
+    h3 {
+        text-align: center;
+        font-family: raleway, sans-serif;   
+    }
+}
+
 .hours {
     text-align: center;
     font-family: raleway, sans-serif;
-}
-
-.locations h2 {
-    text-align: center;
-}
-
-.hours {
     margin: 2% 35%;
     padding: 2%;
     background-color: @mauve;
@@ -322,6 +354,20 @@ p {
     font-family: roboto, sans-serif;
 }
 
+.card-group {
+    display: flex;
+}
+
+.card-group section:first-child {
+    display: flex;
+    margin-bottom: 25px;
+  }
+
+.card-group img {
+    max-width: 100%;
+    height: auto;
+  }
+
 .card {
     margin: 0% 5% 0% 5%;
     border: none;
@@ -372,6 +418,7 @@ p {
     font-size: @font-p;
     text-align: center;
 }
+
 /************MENU PAGE END**********/
 
 
@@ -402,7 +449,6 @@ p {
 .bobabackground {
     max-width: 1000px;
 }
-
 
 #background-wrap {
     bottom: 0;
@@ -644,6 +690,17 @@ p {
 /************ABOUT PAGE END**********/
 
 /*********MEDIA QUERIES*************/
+
+/*********MENU PAGE MAX-WIDTH 600PX MEDIA QUERY*************/
+@media (max-width: 600px) {
+    .card-group {
+        display:flex;
+        flex-direction: column;
+    }
+}
+/*********MENU PAGE MAX-WIDTH 600PX MEDIA QUERY*************/
+
+
 /*********LOCATIONS PAGE MIN-WIDTH 320PX MEDIA QUERY*************/
 @media (min-width: 320px) {
     .hours {
@@ -672,10 +729,11 @@ p {
     }
 
     .desktopindex-top img {
-        width: 50%;
+        width: 100%;
     }
 
     .index1-desktop{
+        width: 150%;
         background: @light-green;
         display: flex;
         flex-direction: column;
@@ -697,6 +755,12 @@ p {
         margin: auto;
         
         }
+
+    }
+
+    .index-reviews {
+        flex-direction: row;
+        padding: 0 2% 2%;
     }
 
     .index-span1{
@@ -704,7 +768,6 @@ p {
 
 
     }
-
 
     .index-bottom {
         padding: 0%;
@@ -749,22 +812,9 @@ p {
         margin: 0 auto;
     }
 
-    .index1-desktop p{
-        padding-top: 16%;
-    }
+    /********* MIN-WIDTH 600PX MEDIA QUERY*************/
 
-    .index-span1{
-        font-size: 44px;
-    }
-}
-
-/************MENU PAGE END**********/
-
-
-
-/************ MEDIA QUERY **********/
-
-@media (min-width: 800px) {
+@media (min-width: 600px) {
 
     #menuToggle {
 		display: none;
@@ -803,8 +853,47 @@ p {
             transition: 1s ease;
         }
 	}
-
 }
+
+/********* FOOTER START MIN-WIDTH 610PX MEDIA QUERY*************/
+@media (min-width: 610px) {
+    footer {
+    
+        li {
+            display: inline;
+        }
+        ul {
+            padding: 20px 100px 0;
+            margin-left: 5%;
+        }
+        p {
+            padding: 10px 100px 0;
+        }
+    }
+}
+/********* FOOTER END MIN-WIDTH 610PX MEDIA QUERY*************/
+
+
+/*********HOME PAGE MIN-WIDTH 830PX MEDIA QUERY*************/
+@media(min-width:830px) {
+
+    .index-body{
+        margin: 0 auto;
+    }
+
+    .index1-desktop p{
+        padding-top: 16%;
+    }
+
+    .index-span1{
+        font-size: 44px;
+    }
+}
+
+/************MENU PAGE END**********/
+
+
+
 
 /*********ABOUT PAGE MIN-WIDTH 1025PX MEDIA QUERY*************/
 
@@ -816,3 +905,7 @@ p {
     }
 
 /*********ABOUT PAGE END MIN-WIDTH 1025PX MEDIA QUERY*************/
+
+/*********ABOUT PAGE END MIN-WIDTH 1025PX MEDIA QUERY*************/
+
+
