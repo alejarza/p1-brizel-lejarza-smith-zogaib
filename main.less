@@ -48,8 +48,8 @@ body {
   top: -7px;
   left: -5px;
   cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0;
+  z-index: 2;
   -webkit-touch-callout: none;
 }
 
@@ -323,6 +323,20 @@ p {
     font-family: roboto, sans-serif;
 }
 
+.card-group {
+    display: flex;
+}
+
+.card-group section:first-child {
+    display: flex;
+    margin-bottom: 25px;
+  }
+
+.card-group img {
+    max-width: 100%;
+    height: auto;
+  }
+
 .card {
     margin: 0% 5% 0% 5%;
     border: none;
@@ -372,6 +386,7 @@ p {
     font-size: @font-p;
     text-align: center;
 }
+
 /************MENU PAGE END**********/
 
 
@@ -676,10 +691,11 @@ p {
     }
 
     .desktopindex-top img {
-        width: 50%;
+        width: 100%;
     }
 
     .index1-desktop{
+        width: 150%;
         background: @light-green;
         display: flex;
         flex-direction: column;
@@ -701,6 +717,7 @@ p {
         margin: auto;
         
         }
+
     }
 
     .index-reviews {
